@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoder</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .intro {
+            margin-bottom: 20px;
+        }
+
+        .textarea-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .result-container {
+            margin-top: 20px;
+        }
+
+        textarea[readonly] {
+            background-color: #ddd;
+        }
+        
+        
+        .area__resultado__info {
+            margin-top: 10px;
+            color: #555;
+        }
+        .credits-container {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Decoder</h1>
+    </header>
+    <main>
+        <div class="intro">
+            <h2>How it's works?</h2>
+            <p>
+                Enter a word or phrase in the field below. Then, choose whether to encode or decode using the buttons.
+            </p>
+            <p>
+                <span style="color: red;">ATTENTION</span> For the correct functioning of the encoder, <span style="color: red;">DO NOT</span> use uppercase letters, accents, or special characters
+            </p>
+        </div>
+        <div class="credits-container">
+            <p>
+                <span style="color: rgb(238, 235, 235);"> Project made by Caio Renato Rodrigues Vicente
+            </p>
+        </div>
+        <div class="textarea-container">
+            <textarea id="entrada-de-texto" onfocus="limparTexto()"></textarea>
+            <div class="buttons-container">
+                <button onclick="criptografar()">Codificar</button>
+                <button onclick="descriptografar()">Decodificar</button>
+            </div>
+        </div>
+        
+        <div class="result-container">
+            <textarea id="saida-de-texto" readonly>Your text decoded or encoded will appear right here</textarea>
+            <div class="area__resultado__info" id="resultado-info" style="color: black;"></div>
+        
+            <div class="buttons-container">
+                <button onclick="copiar()">Copiar</button>
+            </div>
+        </div>
+        
+        <script>
+            function copiar() {
+                var saidaTexto = document.getElementById('saida-de-texto');
+                saidaTexto.select();
+                document.execCommand('copy');
+                alert('Texto copiado para a área de transferência.');
+            }
+        </script>        
+    </main>
+</body>
+</html>

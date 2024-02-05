@@ -1,0 +1,102 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('photo.jpg');
+    background-size: cover;
+    color: #fff;
+    position: relative;
+}
+
+.cabecalho {
+    padding: 20px;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cabecalho__texto {
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.main__apresentacao {
+    flex: 1;
+    max-width: 400px;
+    color: #fff;
+}
+
+.main__apresentacao__titulo {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.main__conteudo {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+}
+
+.area__codificador,
+.area__resultado {
+    flex: 1;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.area__codificador__input,
+.area__resultado__texto {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.area__codificador__botoes,
+.area__resultado__botoes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.botao {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.rodape {
+    background-image: url('C:\\Users\\caiov\\Desktop\\ONE CHALLEGER\\Projeto One\\styles\\photo.jpg');
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
